@@ -16,20 +16,15 @@ Dark green: #28b485
 
 html{
     font-size: 62.5%;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 body{
     font-family: 'Source Sans Pro', sans-serif , Arial, Helvetica;
     font-weight: 400;
     line-height: 1.7;
-    /* font-size: 16px; */
     color: #777777;
     padding: 2%;
     box-sizing: border-box;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 /* --------------------------- */
@@ -44,6 +39,7 @@ body{
     padding: 1rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     font-size: 1.6rem;
+    margin: 0;
 
 }
 
@@ -55,13 +51,13 @@ body{
     animation: pulse 0.5s;
 }
 
-.logo-box{
+.header_logo-box{
     position: absolute;
     top: 10%;
     left: 6%;
 }
 
-.header-text-box{
+.header_text-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,7 +72,7 @@ body{
     
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     letter-spacing: 3rem;
@@ -85,7 +81,7 @@ body{
     backface-visibility: hidden;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 200;
@@ -103,7 +99,7 @@ body{
     position: relative;
 
 }
-.btn-animated{
+.btn--animated{
     animation: moveInUp .7s ease-out .50s;
     animation-fill-mode: backwards;
 }
@@ -132,7 +128,7 @@ body{
     transform: scaleX(1.1) scaleY(1.2);
     opacity: 0;
 }
-.btn-white{
+.btn--white{
     background-color: #ffffff;
     color: #777777;
 }
@@ -190,4 +186,18 @@ body{
         opacity: 1;
         transform: translate(0);
     }
+}
+
+
+/* --------------------------- */
+/* -------media-queries -------*/
+/* --------------------------- */
+
+@media only screen and (max-width:767px){
+    html{font-size: 43%;}
+    .heading-primary--main{letter-spacing: 2rem; font-weight: 400;}
+    .heading-primary--sub{font-size: 2.5rem;font-weight: 250;letter-spacing: 1rem;word-spacing: 0; margin-bottom: 8rem; margin-top:1.5rem ;}
+    .header_text-box{width: 100%;}
+    .btn:link,
+    .btn:visited{font-size: 2rem;padding: 1.7rem 3rem;}
 }
