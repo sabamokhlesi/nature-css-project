@@ -1,0 +1,56 @@
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 7%;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 3rem;
+        font-weight: 300;
+        animation: moveInLeft 1s ease-out;
+        backface-visibility: hidden;
+    }
+
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 200;
+        letter-spacing: 1.8rem;
+        animation: moveInRight 1s ease-out;
+    }
+    
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right,$color-light-green,$color-dark-green);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+    letter-spacing: .2rem;
+
+    &:hover{
+        transform: skewY(2deg) skewX(3deg) scale(1.01);
+        text-shadow: .5rem 1rem 2rem rgb(129, 129, 129);
+    }
+}
+
+
+
+.heading-h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragragh{
+    font-size: 1.5rem;
+    text-align: justify;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
