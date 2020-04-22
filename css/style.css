@@ -111,6 +111,22 @@ body {
   padding: 25rem 0;
   margin-top: -20vh; }
 
+.section-features {
+  margin-top: -40vh;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  margin-top: -20vh;
+  text-align: center; }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 30rem 0 50rem 0;
+  margin-top: -20vh; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -190,12 +206,125 @@ body {
       left: 20%;
       top: 12rem; }
     .composition_photo:hover {
-      outline: 1rem solid green;
+      outline: 1rem solid #28b485;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem black;
       z-index: 20; }
   .composition:hover .composition_photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 240, 0.76);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem #777;
+  transition: all .3s; }
+  .feature-box_icon {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.05); }
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 53rem; }
+  .card_side {
+    overflow: hidden;
+    height: 53rem;
+    transition: all 1s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #acacac; }
+    .card_side--front {
+      background-color: white; }
+    .card_side--back {
+      transform: rotateY(180deg);
+      background-color: linear-gradient(to right bottom, #ffd76b, #ff8f33); }
+      .card_side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffd76b, #ff8f33); }
+      .card_side--back-2 {
+        background-image: linear-gradient(to right bottom, #bbf1b2, #28b485); }
+      .card_side--back-3 {
+        background-image: linear-gradient(to right bottom, #91fdfd, #08b8cf); }
+  .card:hover .card_side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card_side--back {
+    transform: rotateY(0); }
+  .card_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen; }
+    .card_picture-1 {
+      background-image: url(../img/nat-5.jpg), linear-gradient(to right bottom, #ffd76b, #ff8f33);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card_picture-2 {
+      background-image: url(../img/nat-6.jpg), linear-gradient(to right bottom, #bbf1b2, #28b485);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card_picture-3 {
+      background-image: url(../img/nat-5.jpg), linear-gradient(to right bottom, #91fdfd, #08b8cf);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  .card_heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: ivory;
+    position: absolute;
+    top: 12rem;
+    left: 17rem;
+    width: 75%; }
+  .card_heading-span {
+    padding: 1rem 2rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card_heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 215, 107, 0.85), rgba(255, 143, 51, 0.85)); }
+    .card_heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(187, 241, 178, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card_heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(145, 253, 253, 0.85), rgba(8, 184, 207, 0.85)); }
+  .card_details {
+    text-align: center;
+    padding: 3rem; }
+    .card_details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card_details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin: 1rem; }
+        .card_details ul li:not(:last-child) {
+          border-bottom: 1px solid #c4c4c4; }
+  .card_cta {
+    text-align: center;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card_price-box {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white; }
+  .card_price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card_price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+  .card a {
+    font-size: 2rem; }
 
 .header {
   height: 95vh;

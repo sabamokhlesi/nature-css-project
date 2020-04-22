@@ -23,7 +23,7 @@
             top: 12rem;
         }
         &:hover{
-            outline: 1rem solid green;
+            outline: 1rem solid $color-dark-green;
             transform:scale(1.05) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem black;
             z-index: 20;
