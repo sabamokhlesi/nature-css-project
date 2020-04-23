@@ -44,6 +44,15 @@
             background-color: $color-white;
         }
     }
+
+    &--green{
+        background-color: $color-medium-green;
+        color : $color-white;
+        font-size: $default-font-size;
+        &::after{
+            background-color: $color-medium-green;
+        }
+    }
 }
 
 .btn-text{
@@ -66,8 +75,5 @@
         transform: translateY(-2px);
         padding-left: 5px;
         padding-right: 5px;
-    }
-    &:active{
-
     }
 }
