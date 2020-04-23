@@ -1,0 +1,93 @@
+.form{
+    &-group:not(:last-child){
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        
+    }
+
+    &-lable{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: .7rem;
+        margin-left: 2rem;
+        display: block;
+        transition: all .3s;
+    }
+    &-input{
+        font-size: 1.5rem;
+        color: inherit;
+        font-family: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 3px;
+        width: 90%;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.849);
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+        &:focus:invalid{
+            border-bottom:3px solid orangered;
+        }
+        &::-webkit-input-placeholder{
+            color: rgba(0, 0, 0, 0.466);
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.199);
+            border-bottom: 3px solid $color-medium-green;
+        }
+    }
+
+    &-input:placeholder-shown + &-lable{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &-radio-group{
+        width: 49%;
+        display: inline-block;
+    }
+    &-radio-input{
+        display: none;
+    }
+    &-radio-group{
+        cursor: pointer;
+    }
+
+    &-radio-lable{
+        padding-left: 3.7rem;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    &-radio-btn{
+        height: 2.5rem;
+        position: absolute;
+        top: -0.2rem;
+        left: .5rem;
+        width: 2.5rem;
+        border: 5px solid $color-medium-green;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all .3s;
+        &::after{
+            content: '';
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-medium-green;
+            height: 1rem;
+            width: 1rem;
+            transition: all .2s;
+        }
+    }
+    &-radio-input:checked ~ &-radio-lable &-radio-btn::after{
+        opacity: 1;
+    }
+}
+

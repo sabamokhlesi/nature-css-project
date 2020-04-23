@@ -1,4 +1,5 @@
 .btn{
+    &,
     &:link,
     &:visited{
         text-decoration: none;
@@ -7,6 +8,8 @@
         border-radius: 100px;
         transition: all 0.25s;
         position: relative;
+        cursor: pointer;
+        border: none;
 
     }
     &--animated{
@@ -16,12 +19,15 @@
     &:hover{
         transform: translateY(-3px);
         box-shadow:0 1rem 2rem #0000003f;
+        
         &::after{
             transform: scaleX(1.1) scaleY(1.2);
             opacity: 0;
         }
     }
-    &:active{
+    &:active,
+    &:focus{
+        outline: none;
         transform: translateY(-1px);
         box-shadow:0 .5rem 1rem #0000003f;
     }
