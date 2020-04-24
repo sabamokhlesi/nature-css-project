@@ -25,12 +25,3 @@
 /* --------------------------- */
 /* -------media-queries -------*/
 /* --------------------------- */
-
-@media only screen and (max-width:767px){
-    html{font-size: 43%;}
-    .heading-primary--main{letter-spacing: 2rem; font-weight: 600;}
-    .heading-primary--sub{font-size: 2.7rem;font-weight:bold;letter-spacing: 0.6rem;word-spacing: 0; margin-bottom: 8rem; margin-top:1.5rem ;}
-    .header_text-box{width: 100%;}
-    .btn:link,
-    .btn:visited{font-size: 2rem;padding: 1.7rem 3rem;}
-}
