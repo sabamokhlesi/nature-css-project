@@ -511,6 +511,69 @@ body {
 .form-radio-input:checked ~ .form-radio-lable .form-radio-btn::after {
   opacity: 1; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.904);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup-close:link, .popup-close:visited {
+    color: gray;
+    font-size: 4rem;
+    text-shadow: 0 0 4rem rgba(0, 0, 0, 0.404);
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s; }
+  .popup-close:hover {
+    color: black; }
+  .popup-content {
+    width: 75%;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba(128, 128, 128, 0.295);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    transition: all .3s .2s ease-out; }
+  .popup:target .popup-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; }
+  .popup-left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup-right {
+    width: 66.666666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5rem; }
+  .popup-img {
+    display: block;
+    width: 100%; }
+  .popup-text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    text-align: justify;
+    column-rule: 1px solid #c9c7c7;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -606,6 +669,116 @@ body {
     display: inline-block;
     width: 80%;
     float: right; }
+
+.navigation-checkbox {
+  display: none; }
+
+.navigation-btn {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.486);
+  cursor: pointer; }
+
+.navigation-background {
+  z-index: 1000;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#55c57a, #28b485);
+  transition: all .8s; }
+
+.navigation-nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  transition: all .8s; }
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation-item {
+  margin: 1rem; }
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 270%;
+  transition: all .5s; }
+  .navigation-link:link span, .navigation-link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #28b485;
+  transform: translateX(-1rem); }
+
+.navigation-checkbox:checked ~ .navigation-background {
+  transform: scale(80); }
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation-icon {
+  position: relative;
+  margin-top: 3.5rem;
+  margin-left: 2rem; }
+  .navigation-icon, .navigation-icon::before, .navigation-icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: gray;
+    display: inline-block; }
+  .navigation-icon::before, .navigation-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation-icon::after {
+    top: .8rem; }
+  .navigation-icon::before {
+    top: -.8rem; }
+
+.navigation-btn:hover .navigation-icon::before {
+  top: -1rem; }
+
+.navigation-btn:hover .navigation-icon::after {
+  top: 1rem; }
+
+.navigation-checkbox:checked + .navigation-btn .navigation-icon {
+  background-color: transparent; }
+
+.navigation-checkbox:checked + .navigation-btn .navigation-icon::before {
+  transform: rotate(135deg);
+  top: 0; }
+
+.navigation-checkbox:checked + .navigation-btn .navigation-icon::after {
+  transform: rotate(-135deg);
+  top: 0; }
 
 /* --------------------------- */
 /* -------media-queries -------*/
