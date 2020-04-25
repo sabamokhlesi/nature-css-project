@@ -4,6 +4,12 @@
 
 .u-margin-bottom-big{
     margin-bottom: 8rem;
+    @include respond(tab-port){
+        margin-bottom: 6rem;
+    }
+    @include respond(phone){
+        margin-bottom: 4rem;
+    }
 }
 
 .u-margin-bottom-medium{
@@ -28,6 +34,9 @@
 
 .u-margin-top-huge{
     margin-top: 10rem;
+    @include respond(tab-port){
+        margin-top: 1rem;
+    }
 }
 
 .u-small-font-size{
