@@ -129,7 +129,7 @@
     a{
         font-size: 2rem;
     }
-    @include respond(tab-port){
+    @media only screen and (max-width:56.25em){
         height: auto;
         border-radius: 10px;
         background-color: white;

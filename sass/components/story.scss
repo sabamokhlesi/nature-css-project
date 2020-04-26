@@ -30,10 +30,13 @@
         width: 15rem;
         height: 15rem;
         float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3.5rem) skewX(12deg);
+        -webkit-clip-path:circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         position: relative;
+        overflow: hidden;
         @include respond (phone){
             transform: translateX(-2rem) skewX(0);
             width: 13rem;
@@ -64,5 +67,8 @@
     &:hover &-caption{
         opacity: 1;
         transform: translate(-50% , -50%)scale(1.3);
+    }
+    &:hover &-img{
+        filter: brightness(.6) blur(3px);
     }
 }

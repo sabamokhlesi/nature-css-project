@@ -7,13 +7,13 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 100%; } }
 
@@ -24,9 +24,13 @@ body {
   color: #777;
   padding: 2%;
   box-sizing: border-box; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #28b485;
+  color: white; }
 
 /* --------------------------- */
 /* --------animations ---------*/
@@ -71,10 +75,10 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 6rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-big {
       margin-bottom: 4rem; } }
 
@@ -95,7 +99,7 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-top-huge {
       margin-top: 1rem; } }
 
@@ -113,7 +117,7 @@ body {
     font-weight: 300;
     animation: moveInLeft 1s ease-out;
     backface-visibility: hidden; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 6rem; } }
@@ -123,11 +127,11 @@ body {
     font-weight: 200;
     letter-spacing: 1.8rem;
     animation: moveInRight 1s ease-out; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .heading-primary--sub {
         letter-spacing: 1rem;
         font-size: 2.5rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .5rem;
         font-size: 2.5rem; } }
@@ -142,10 +146,10 @@ body {
   color: transparent;
   transition: all .2s;
   letter-spacing: .2rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 3rem; } }
   .heading-secondary:hover {
@@ -156,7 +160,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-h3 {
       font-size: 2rem;
       font-weight: bold; } }
@@ -166,10 +170,10 @@ body {
   text-align: justify; }
   .paragragh:not(:last-child) {
     margin-bottom: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .paragragh {
       font-size: 2rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .paragragh {
       font-size: 1.8rem; } }
 
@@ -188,10 +192,10 @@ body {
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   margin-top: -20vh;
   text-align: center; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-features {
       clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
       padding: 14rem 0; } }
@@ -202,7 +206,7 @@ body {
   margin-top: -20vh;
   text-align: center;
   font-size: 2rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-tours {
       padding: 23rem 0 8rem 0; } }
 
@@ -210,14 +214,14 @@ body {
   overflow: hidden;
   position: relative;
   padding: 15rem 0; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-stories {
       padding: 5rem 0; } }
 
 .section-booking {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-booking {
       padding: 5rem 0; } }
 
@@ -230,16 +234,16 @@ body {
   .book-form {
     padding: 6rem;
     width: 50%; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .book-form {
         padding: 4rem;
         text-align: center; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book-form {
         padding: 5rem;
         width: 100%;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.89) 0%, rgba(255, 255, 255, 0.89) 100%), url(../img/nat-10.jpg); } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .book-form {
         padding: 3rem 1rem 5rem 1rem; } }
 
@@ -314,7 +318,7 @@ body {
 
 .composition {
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition {
       margin-top: 3rem;
       padding-bottom: 30rem; } }
@@ -455,7 +459,7 @@ body {
     font-weight: 100; }
   .card a {
     font-size: 2rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .card {
       height: auto;
       border-radius: 10px;
@@ -505,29 +509,32 @@ body {
   transition: all .3s;
   backface-visibility: hidden;
   transform: skewX(-12deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 5rem;
       padding-left: 5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .story {
       transform: skewX(0);
       padding-left: 6rem; } }
   .story > * {
     transform: skewX(12deg); }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story > * {
         transform: skewX(0); } }
   .story_shape {
     width: 15rem;
     height: 15rem;
     float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3.5rem) skewX(12deg);
+    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    position: relative; }
-    @media (max-width: 37.5em) {
+    position: relative;
+    overflow: hidden; }
+    @media only screen and (max-width: 37.5em) {
       .story_shape {
         transform: translateX(-2rem) skewX(0);
         width: 13rem;
@@ -551,6 +558,8 @@ body {
   .story:hover .story-caption {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.3); }
+  .story:hover .story-img {
+    filter: brightness(0.6) blur(3px); }
 
 .bg-video {
   position: absolute;
@@ -652,10 +661,15 @@ body {
   top: 0;
   left: 0;
   z-index: 10000;
-  background-color: rgba(0, 0, 0, 0.904);
+  background-color: rgba(0, 0, 0, 0.795);
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.637); } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -710,7 +724,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -718,10 +732,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   font-size: 1.6rem;
   margin: 0; }
-  @media (max-width: 56.25em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
+  @media only screen and (max-width: 56.25em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); } }
   .header_text-box {
@@ -734,11 +751,11 @@ body {
     position: absolute;
     top: 10%;
     left: 6%; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .header_logo-box {
         top: 6%;
         left: 5%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .header_logo-box {
         top: 6%;
         left: 8%; } }
@@ -753,7 +770,7 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
   .row::after {
@@ -764,60 +781,60 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .row {
       padding: 0 3rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       width: 100%;
       max-width: 65rem;
       padding: 0 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .row {
       width: 100%;
       max-width: 50rem;
       padding: 0 3rem; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     .row {
       max-width: 130rem; } }
 
 .col-1-of-2 {
   width: calc((100% - 6rem)/2); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-1-of-2 {
       width: 100%; } }
 
 .col-1-of-3 {
   width: calc((100% - 2 * 6rem)/3); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-1-of-3 {
       width: 100%; } }
 
 .col-2-of-3 {
   width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-2-of-3 {
       width: 100%; } }
 
 .col-1-of-4 {
   width: calc((100% - 3 * 6rem)/4); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-1-of-4 {
       width: 100%; } }
 
 .col-2-of-4 {
   width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-2-of-4 {
       width: 100%; } }
 
 .col-3-of-4 {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-3-of-4 {
       width: 100%; } }
 
@@ -826,13 +843,13 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   transition: all .2s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
   .footer-logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer-logo-box {
         margin-bottom: 6rem; } }
   .footer-logo {
@@ -842,7 +859,7 @@ body {
     border-top: 1px solid #acacac;
     padding-top: 2rem;
     display: inline-block; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer-navigation {
         display: block;
         width: 100%;
@@ -869,7 +886,7 @@ body {
     display: inline-block;
     width: 80%;
     float: right; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer-copyright {
         display: block;
         width: 100%;
